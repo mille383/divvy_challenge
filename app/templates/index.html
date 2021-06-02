@@ -1,37 +1,23 @@
-{% extends 'layout.html' %}
+<!doctype html>
+<html lang="en">
 
-{% block content %}
-    <h4>Home</h4>
-    <p>Hello {{ current_user.first_name }} </p>
-    <hr>
-    {% if not current_user.is_authenticated %}
-        <p>You must be logged in to create a post</p>
-    {% else %}
-        <form action="{{ url_for('home') }}" method="POST" s>
-            <div class = "form-group">
-                <div class="row">
-                    <div class="col-md-10">
-                        <input name="body_text" class="form-control" type="text" placeholder="Make a new post" />
-                    </div>
-                    <div class="col-md-2">
-                        <input class="btn btn-info" type="submit" value="Post" />
-                    </div>
-                </div>
-            </div>
-        </form>
-    {% endif %}
-    <hr>
+<head>
     
-    <ul class="list-group">
-        {% for p in posts %}
-        <li class="list-group-item">
-            <p>{{ p.body }}</p>
-            <div>
-                <span>
-                    <cite>&mdash; {{ p.user.first_name }} {{ p.user.last_name }}</cite>
-                </span>
-            </div>
-        </li>
-        {% endfor %}
-    </ul>
-{% endblock content %}
+    <title>Divvy Challenge</title>
+
+</head>
+
+<body>
+
+    
+    <h2>Divvy Challenge</h2>
+    <p>Route is /calculate</p><br>
+    <p>Can add start date (start), end date (end) and station id (from_station_id)</p>
+    
+    
+</body>
+
+</html>
+    
+  
+    
